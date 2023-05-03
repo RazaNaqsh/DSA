@@ -19,3 +19,5 @@ public class JavaTypeConversion {
 // left ones can be converted to the right ones, but not vice versa
 
 //? This is also called implicit or widening or type conversion in Java
+
+// ! Also, character Can be converted into int, a will convert to 97 
