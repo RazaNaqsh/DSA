@@ -32,3 +32,15 @@ public class JavaBasics {
         System.out.println(a);
     }
 }
+
+// data types in Java
+/* byte : 1 byte, [-128,127], 
+    char: 2bytes
+    byte can only store till 256 chars,
+    boolean: 1 byte,
+     float:4 bytes,
+     int: 4bytes,
+     long : 8 bytes,
+     double: 8 bytes,
+     short: 2 bytes,
+ */
