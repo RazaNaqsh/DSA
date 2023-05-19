@@ -1,9 +1,9 @@
 public class BubbleSort {
     public static void bubbleSort(int arr[]) {
         int swap = 0;
-        for (int i = 0; i <= arr.length - 2; i++) {
+        for (int i = 0; i < arr.length ; i++) {
             
-            for (int j = 0; j <= arr.length - 2 - i ; j++) {
+            for (int j = 0; j < arr.length - 1 - i ; j++) {
                 if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
                     arr[j] = arr[j + 1];
@@ -24,7 +24,7 @@ public class BubbleSort {
         }
     }
     public static void main(String[] args) {
-        int numbers[] = { 1, 2, 3, 4, 5 };
+        int numbers[] = {4,3,2,5,1};
         bubbleSort(numbers);
     }
 }
