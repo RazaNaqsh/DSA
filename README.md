@@ -19,6 +19,6 @@ The following algorithms are included:
   - Insertion Sort
   - Counting Sort
 
-  - [Search Algorithms]
+- [Search Algorithms]
   - Linear Search
   - Binary Search
