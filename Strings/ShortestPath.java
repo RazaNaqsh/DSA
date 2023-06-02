@@ -1,5 +1,5 @@
 public class ShortestPath {
-   
+
     public static float shortestPath(String str) {
         /* First find coordinates */
         int x = 0, y = 0;
@@ -27,6 +27,6 @@ public class ShortestPath {
         String path = "WNEENESENNN";
 
         float displacement = shortestPath(path);
-         System.out.println(displacement);
+        System.out.println(displacement);
     }
 }
