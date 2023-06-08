@@ -23,5 +23,6 @@ public class Diamond {
     }
     public static void main(String args[]) {
         diamond(5);
+        diamond(6);
     }
 }

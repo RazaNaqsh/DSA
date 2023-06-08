@@ -4,9 +4,14 @@ This repository contains Java implementations of various Data Structures and
 Algorithms commonly used in Computer Science and Software Engineering. Each
 implementation is provided as a separate Java file.
 
-The following data structures are included:
+The following Topics are included:
 
+- [Functions]
+- [Patterns]
 - [Array]
+- [2DArray]
+- [Strings]
+- [OOPS]
 
 ## Algorithms
 
