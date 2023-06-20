@@ -35,7 +35,10 @@ public class MergeSort {
             }
             k++;
         }
-        // now paste the remaining elements
+
+        // now paste the remaining elements, because after we have compared both left
+        // and right, the remaining elements are already sorted in whichever part.
+
         while (i <= mid) {
             temp[k++] = arr[i++];
         }
