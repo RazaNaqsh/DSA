@@ -9,6 +9,8 @@ public class Static {
 }
 
 class Student {
+    // static things will remain same thru out every objects that are created from
+    // this class.
     static int returnPercentage(int math, int phys, int chem) {
         return (math + phys + chem) / 3;
     }
