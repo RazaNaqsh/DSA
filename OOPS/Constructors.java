@@ -50,6 +50,13 @@ class Student {
         marks = new int[3];
 
         this.roll = s2.roll;
+        // this shallow copies the marks, if we wanna do deep copy then we would have to
+        // run a loop then copy.
         this.marks = s2.marks;
+
+        /* This is deep copy, below */
+        // for (int i = 0; i < marks.length; i++) {
+        // this.marks[i] = s2.marks[i];
+        // }  
     }
 }
