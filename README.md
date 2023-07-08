@@ -12,6 +12,7 @@ The following Topics are included:
 - [2DArray]
 - [Strings]
 - [OOPS]
+- [Backtracking]
 
 ## Algorithms
 
