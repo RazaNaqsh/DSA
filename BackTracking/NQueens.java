@@ -1,9 +1,31 @@
 public class NQueens {
 
-    // *This code is just for a subproblem of placing n queens in n rows, without
-    // * considering the attacking part
-    // * We just place queens in different rows for this sub problem so that they
-    // * arent in the same row
+    // *Now we consider the safety of queen, so we implement an isSafe function
+    // *And we have to check only above three directions: up, diagonal left up,
+    // *diagonal right up
+
+    // *And this code works for final nqueens which prints all possible solutions.
+
+    public static boolean isSafe(char board[][], int row, int col) {
+        // Check up
+        for (int i = row - 1; i >= 0; i--) {
+            if (board[i][col] == 'Q')
+                return false;
+        }
+
+        // check diagonal left up
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+            if (board[i][j] == 'Q')
+                return false;
+        }
+
+        // check diagonal right up
+        for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
+            if (board[i][j] == 'Q')
+                return false;
+        }
+        return true;
+    }
 
     public static void nQueens(char board[][], int row) {
         // Base Case
@@ -13,11 +35,11 @@ public class NQueens {
         }
 
         for (int j = 0; j < board.length; j++) {
-
-            board[row][j] = 'Q';
-            nQueens(board, row + 1);
-            board[row][j] = 'x';
-
+            if (isSafe(board, row, j)) {
+                board[row][j] = 'Q';
+                nQueens(board, row + 1); // recursion step
+                board[row][j] = 'x'; // backtracking step
+            }
         }
     }
 
@@ -32,7 +54,7 @@ public class NQueens {
     }
 
     public static void main(String[] args) {
-        int n = 2;
+        int n = 4;
         char board[][] = new char[n][n];
 
         // initialize
@@ -41,8 +63,6 @@ public class NQueens {
                 board[i][j] = 'x';
             }
         }
-
         nQueens(board, 0);
-
     }
 }
