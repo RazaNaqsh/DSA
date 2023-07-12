@@ -12,6 +12,8 @@ The following Topics are included:
 - [2DArray]
 - [Strings]
 - [OOPS]
+- [Recursions]
+- [Divide&Conquer]
 - [Backtracking]
 
 ## Algorithms
