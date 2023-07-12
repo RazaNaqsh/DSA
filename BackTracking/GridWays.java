@@ -7,8 +7,8 @@ public class GridWays {
             return 0;
         }
 
-        int w1 = gridWays(i + 1, j, n, m); // ways to go right
-        int w2 = gridWays(i, j + 1, n, m); // ways to go down
+        int w1 = gridWays(i + 1, j, n, m); // ways to go down
+        int w2 = gridWays(i, j + 1, n, m); // ways to go right
 
         return w1 + w2;
     }
