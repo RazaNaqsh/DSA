@@ -12,7 +12,7 @@ The following Topics are included:
 - [2DArray]
 - [Strings]
 - [OOPS]
-- [Recursions]
+- [Recursion]
 - [Divide&Conquer]
 - [Backtracking]
 
@@ -26,6 +26,8 @@ The following algorithms are included:
   - Selection Sort
   - Insertion Sort
   - Counting Sort
+  - Merge Sort
+  - Quick Sort
 
 - [Search Algorithms]
   - Linear Search
