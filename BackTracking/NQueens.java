@@ -30,7 +30,8 @@ public class NQueens {
     public static void nQueens(char board[][], int row) {
         // Base Case
         if (row == board.length) {
-            printBoard(board);
+            // printBoard(board);
+            count++;
             return;
         }
 
@@ -53,8 +54,10 @@ public class NQueens {
         }
     }
 
+    static int count = 0;
+
     public static void main(String[] args) {
-        int n = 4;
+        int n = 5;
         char board[][] = new char[n][n];
 
         // initialize
@@ -64,5 +67,6 @@ public class NQueens {
             }
         }
         nQueens(board, 0);
+        System.out.println("Total ways to solve n queens: " + count);
     }
 }
