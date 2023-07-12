@@ -4,7 +4,7 @@ public class NQueens {
     // *And we have to check only above three directions: up, diagonal left up,
     // *diagonal right up
 
-    // *And this code works for giving number of solutions possible
+    // *And this code works for checking if the solution is possible or not
 
     public static boolean isSafe(char board[][], int row, int col) {
         // Check up
@@ -27,21 +27,26 @@ public class NQueens {
         return true;
     }
 
-    public static void nQueens(char board[][], int row) {
+    public static boolean nQueens(char board[][], int row) {
         // Base Case
         if (row == board.length) {
             // printBoard(board);
             count++;
-            return;
+            return true;
         }
 
         for (int j = 0; j < board.length; j++) {
             if (isSafe(board, row, j)) {
                 board[row][j] = 'Q';
-                nQueens(board, row + 1); // recursion step
+                if (nQueens(board, row + 1)) { // whenever the first call that reaches the solution reaches it, thus
+                                               // this returns true and backs to the main function, and there we print
+                                               // the first solution that we got
+                    return true;
+                }
                 board[row][j] = 'x'; // backtracking step
             }
         }
+        return false;
     }
 
     public static void printBoard(char board[][]) {
@@ -66,7 +71,13 @@ public class NQueens {
                 board[i][j] = 'x';
             }
         }
-        nQueens(board, 0);
-        System.out.println("Total ways to solve n queens: " + count);
+        if (nQueens(board, 0)) {
+
+            System.out.println("Solution is possible");
+            printBoard(board);
+        } else {
+            System.out.println("Solution is not possible");
+        }
+        // System.out.println("Total ways to solve n queens: " + count);
     }
 }
