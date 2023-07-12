@@ -29,7 +29,7 @@ public class Sudoku {
 
     public static boolean sudokuSolver(int sudoku[][], int row, int col) {
         // base case
-        if (row == 9 && col == 0) {
+        if (row == 9) {
             return true;
         }
 
