@@ -4,7 +4,7 @@ public class NQueens {
     // *And we have to check only above three directions: up, diagonal left up,
     // *diagonal right up
 
-    // *And this code works for final nqueens which prints all possible solutions.
+    // *And this code works for giving number of solutions possible
 
     public static boolean isSafe(char board[][], int row, int col) {
         // Check up
