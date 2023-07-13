@@ -15,6 +15,7 @@ The following Topics are included:
 - [Recursion]
 - [Divide&Conquer]
 - [Backtracking]
+- [ArrayList]
 
 ## Algorithms
 
