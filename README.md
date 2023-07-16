@@ -16,6 +16,7 @@ The following Topics are included:
 - [Divide&Conquer]
 - [Backtracking]
 - [ArrayList]
+- [BitManipulation]
 
 ## Algorithms
 
