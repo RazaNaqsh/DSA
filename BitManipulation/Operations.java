@@ -16,9 +16,21 @@ public class Operations {
         System.out.println(num | shiftBit);
     }
 
+    public static void clearBit(int num, int target) {
+        int shiftBit = 1 << target;
+        System.out.println(num ^ shiftBit);
+    }
+
+    public static void clearBit2(int num, int target) {
+        int shiftBit = ~(1 << target);
+        System.out.println(num & shiftBit);
+    }
+
     public static void main(String[] args) {
-        int num = 4;
+        int num = 6;
         // getBit(num, 2);
-        setBit(num, 1);
+        // setBit(num, 1);
+        clearBit(num, 1);
+        clearBit2(num, 1);
     }
 }
