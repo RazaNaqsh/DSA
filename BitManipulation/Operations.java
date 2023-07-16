@@ -1,6 +1,6 @@
 package BitManipulation;
 
-public class GetBit {
+public class Operations {
     public static void getBit(int num, int target) {
         int shiftBit = 1 << target;
         System.out.println(num & shiftBit);
@@ -11,8 +11,14 @@ public class GetBit {
         }
     }
 
+    public static void setBit(int num, int target) {
+        int shiftBit = 1 << target;
+        System.out.println(num | shiftBit);
+    }
+
     public static void main(String[] args) {
-        int num = 6;
-        getBit(num, 2);
+        int num = 4;
+        // getBit(num, 2);
+        setBit(num, 1);
     }
 }
