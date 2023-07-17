@@ -34,12 +34,18 @@ public class Operations {
         }
     }
 
+    public static void clearIBits(int num, int i) {
+        int bitMask = -1 << i;
+        System.out.println(num & bitMask);
+    }
+
     public static void main(String[] args) {
         int num = 6;
         // getBit(num, 2);
         // setBit(num, 1);
         // clearBit(num, 1);
         // clearBit2(num, 1);
-        updateBit(num, 0, 1);
+        // updateBit(num, 0, 1);
+        clearIBits(15, 2);
     }
 }
