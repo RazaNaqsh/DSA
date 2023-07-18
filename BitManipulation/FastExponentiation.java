@@ -14,8 +14,7 @@ public class FastExponentiation {
     }
 
     public static void main(String[] args) {
-        int result = fastExpo(3, 5);
-
+        int result = fastExpo(2, 5);
         System.out.println(result);
     }
 }
