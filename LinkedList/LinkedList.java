@@ -42,14 +42,29 @@ public class LinkedList {
         tail = newNode;
     }
 
-    // methods
+    public void print() {
+        if (head == null) {
+            System.out.println("LL is empty");
+            return;
+        }
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.println("null");
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
-
-        ll.addFirst(1);
+        ll.print();
         ll.addFirst(2);
+        ll.addFirst(1);
+        ll.print();
 
         ll.addLast(3);
         ll.addLast(4);
+        ll.print();
+
     }
 }
