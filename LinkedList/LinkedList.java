@@ -30,6 +30,18 @@ public class LinkedList {
         head = newNode;
     }
 
+    public void addLast(int data) {
+        Node newNode = new Node(data);
+
+        if (head == null) { // tail == null can also be used, but its convention
+            head = tail = newNode;
+            return;
+        }
+
+        tail.next = newNode;
+        tail = newNode;
+    }
+
     // methods
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
@@ -37,5 +49,7 @@ public class LinkedList {
         ll.addFirst(1);
         ll.addFirst(2);
 
+        ll.addLast(3);
+        ll.addLast(4);
     }
 }
