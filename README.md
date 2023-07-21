@@ -17,6 +17,7 @@ The following Topics are included:
 - [Backtracking]
 - [ArrayList]
 - [BitManipulation]
+- [LinkedList]
 
 ## Algorithms
 
