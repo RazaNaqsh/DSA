@@ -149,6 +149,20 @@ public class LinkedList {
         return helperSearch(head, key);
     }
 
+    public void reverse() {
+        Node prev = null;
+        Node curr = tail = head;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(2);
@@ -165,6 +179,10 @@ public class LinkedList {
         ll.print();
 
         System.out.println(ll.recSearch(2));
+
+        ll.reverse();
+
+        ll.print();
 
     }
 }
