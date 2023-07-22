@@ -128,6 +128,27 @@ public class LinkedList {
         return -1;
     }
 
+    public int helperSearch(Node head, int key) {
+        if (head == null) {
+            return -1;
+        }
+        if (head.data == key) {
+            return 0;
+        }
+
+        int idx = helperSearch(head.next, key);
+
+        if (idx == -1) {
+            return -1;
+        }
+
+        return idx + 1;
+    }
+
+    public int recSearch(int key) {
+        return helperSearch(head, key);
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(2);
@@ -142,6 +163,8 @@ public class LinkedList {
 
         ll.removeLast();
         ll.print();
+
+        System.out.println(ll.recSearch(2));
 
     }
 }
