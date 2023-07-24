@@ -199,7 +199,7 @@ public class LinkedList {
         return slow;
     }
 
-    public boolean checkPalindrom() {
+    public boolean checkPalindrome() {
         if (head == null || head.next == null) {
             return true;
         }
@@ -230,6 +230,20 @@ public class LinkedList {
         return true;
     }
 
+    public boolean isCycle() {
+        Node slow = head;
+        Node fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+
+            if (slow == fast)
+                return true;
+        }
+
+        return false;
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addLast(1);
@@ -238,7 +252,7 @@ public class LinkedList {
         ll.addLast(1);
 
         ll.print();
-        System.out.println(ll.checkPalindrom());
+        System.out.println(ll.checkPalindrome());
 
     }
 }
