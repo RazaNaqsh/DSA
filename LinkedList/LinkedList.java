@@ -332,17 +332,47 @@ public class LinkedList {
         return merge(newLeft, newRight);
     }
 
+    public void zigzag(Node head) {
+        // find mid
+        Node mid = getMid(head);
+
+        // reverse 2nd half
+        Node prev = null;
+        Node curr = mid.next;
+        mid.next = null;
+        Node next;
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        // alternate merging
+        Node left = head;
+        Node right = prev;
+        Node nextL, nextR;
+        while (left != null && right != null) {
+            nextL = left.next;
+            left.next = right;
+            nextR = right.next;
+            right.next = nextL;
+            left = nextL;
+            right = nextR;
+        }
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
 
-        ll.addFirst(1);
-        ll.addFirst(2);
-        ll.addFirst(3);
-        ll.addFirst(4);
-        ll.addFirst(5);
+        ll.addLast(1);
+        ll.addLast(2);
+        ll.addLast(3);
+        ll.addLast(4);
+        ll.addLast(5);
         ll.print();
 
-        ll.head = ll.mergeSort(ll.head);
+        ll.zigzag(head);
         ll.print();
     }
 }
