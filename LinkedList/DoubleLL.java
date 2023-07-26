@@ -49,6 +49,22 @@ public class DoubleLL {
         return val;
     }
 
+    public void reverse() {
+
+        Node curr = head;
+        Node prev = null;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     public void print() {
         Node temp = head;
         while (temp != null) {
@@ -65,7 +81,8 @@ public class DoubleLL {
         dll.addFirst(1);
 
         dll.print();
-        System.out.println(dll.size);
+        dll.reverse();
+        dll.print();
 
     }
 }
