@@ -39,6 +39,7 @@ public class DoubleLL {
         if (size == 1) {
             int val = head.data;
             head = tail = null;
+            size = 0;
             return val;
         }
 
@@ -50,7 +51,6 @@ public class DoubleLL {
     }
 
     public void reverse() {
-
         Node curr = head;
         Node prev = null;
         Node next;
