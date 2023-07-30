@@ -18,6 +18,7 @@ The following Topics are included:
 - [ArrayList]
 - [BitManipulation]
 - [LinkedList]
+- [Stack]
 
 ## Algorithms
 
