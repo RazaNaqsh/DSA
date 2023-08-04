@@ -42,6 +42,10 @@ public class ActivitySelection {
         // Here the end time is already sorted
         int end[] = { 2, 4, 6, 7, 9, 9 };
 
-        actSelection(start, end);
+        // Not sorted
+        int s[] = { 0, 1, 3, 5, 5, 8 };
+        int e[] = { 6, 2, 4, 7, 9, 9 };
+
+        actSelection(s, e);
     }
 }
