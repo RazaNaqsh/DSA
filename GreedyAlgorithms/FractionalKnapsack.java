@@ -3,18 +3,25 @@ import java.util.*;
 public class FractionalKnapsack {
     public static void calcKnapsack(int w[], int v[], int cap) {
         int totalVal = 0;
-        // find ratio, and if its not in order then sort it.
-        int ratio[] = new int[w.length];
-        for (int i = 0; i < ratio.length; i++) {
-            ratio[i] = v[i] / w[i];
+
+        double ratio[][] = new double[v.length][2];
+
+        for (int i = 0; i < v.length; i++) {
+            ratio[i][0] = i;
+            ratio[i][1] = v[i] / (double) w[i];
         }
 
-        for (int i = 0; i < ratio.length; i++) {
-            if (cap > w[i]) {
-                totalVal += v[i];
-                cap -= w[i];
+        // ascending order sort
+        Arrays.sort(ratio, Comparator.comparingDouble(o -> o[1]));
+
+        for (int i = ratio.length - 1; i >= 0; i--) {
+            int idx = (int) ratio[i][0];
+            if (cap > w[idx]) {
+                totalVal += v[idx];
+                cap -= w[idx];
             } else {
-                totalVal += ratio[i] * cap;
+                totalVal += (ratio[i][1] * cap);
+                cap = 0;
                 break;
             }
         }
