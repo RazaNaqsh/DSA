@@ -19,6 +19,8 @@ The following Topics are included:
 - [BitManipulation]
 - [LinkedList]
 - [Stack]
+- [Queue]
+- [GreedyAlgorithms]
 
 ## Algorithms
 
