@@ -21,6 +21,7 @@ The following Topics are included:
 - [Stack]
 - [Queue]
 - [GreedyAlgorithms]
+- [BinaryTree]
 
 ## Algorithms
 
