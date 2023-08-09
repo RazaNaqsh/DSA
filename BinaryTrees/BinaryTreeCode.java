@@ -94,6 +94,24 @@ public class BinaryTreeCode {
             int rh = height(root.right);
             return Math.max(lh, rh) + 1;
         }
+
+        public static int count(Node root) {
+            if (root == null) {
+                return 0;
+            }
+            int lc = count(root.left);
+            int rc = count(root.right);
+            return lc + rc + 1;
+        }
+
+        public static int sumOfNodes(Node root) {
+            if (root == null) {
+                return 0;
+            }
+            int lSum = sumOfNodes(root.left);
+            int rSum = sumOfNodes(root.right);
+            return lSum + rSum + root.data;
+        }
     }
 
     public static void main(String[] args) {
@@ -106,6 +124,6 @@ public class BinaryTreeCode {
         // tree.inorder(root);
         // tree.postorder(root);
         // tree.levelOrder(root);
-        System.out.println(tree.height(root));
+        System.out.println(tree.sumOfNodes(root));
     }
 }
