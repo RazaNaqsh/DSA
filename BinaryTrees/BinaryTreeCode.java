@@ -112,6 +112,20 @@ public class BinaryTreeCode {
             int rSum = sumOfNodes(root.right);
             return lSum + rSum + root.data;
         }
+
+        public static int diameter(Node root) {
+            if (root == null) {
+                return 0;
+            }
+            int ld = diameter(root.left);
+            int lh = height(root.left);
+            int rd = diameter(root.right);
+            int rh = height(root.right);
+
+            int selfD = lh + rh + 1;
+
+            return Math.max(selfD, Math.max(ld, rd));
+        }
     }
 
     public static void main(String[] args) {
@@ -124,6 +138,6 @@ public class BinaryTreeCode {
         // tree.inorder(root);
         // tree.postorder(root);
         // tree.levelOrder(root);
-        System.out.println(tree.sumOfNodes(root));
+        System.out.println(tree.diameter(root));
     }
 }
