@@ -126,6 +126,35 @@ public class BinaryTreeCode {
 
             return Math.max(selfD, Math.max(ld, rd));
         }
+
+        static class TreeInfo {
+            int ht;
+            int diam;
+
+            TreeInfo(int ht, int d) {
+                this.ht = ht;
+                this.diam = d;
+            }
+        }
+
+        public static TreeInfo diam2(Node root) {
+            if (root == null) {
+                return new TreeInfo(0, 0);
+            }
+            TreeInfo left = diam2(root.left);
+            TreeInfo right = diam2(root.right);
+
+            int myHeight = Math.max(left.ht, right.ht) + 1;
+
+            int d1 = left.diam;
+            int d2 = right.diam;
+            int d3 = left.ht + right.ht + 1;
+
+            int myD = Math.max(Math.max(d1, d2), d3);
+
+            TreeInfo myInfo = new TreeInfo(myHeight, myD);
+            return myInfo;
+        }
     }
 
     public static void main(String[] args) {
@@ -138,6 +167,6 @@ public class BinaryTreeCode {
         // tree.inorder(root);
         // tree.postorder(root);
         // tree.levelOrder(root);
-        System.out.println(tree.diameter(root));
+        System.out.println((tree.diam2(root)).diam);
     }
 }
