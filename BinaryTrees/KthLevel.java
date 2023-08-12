@@ -1,7 +1,5 @@
 package BinaryTrees;
 
-import java.util.*;
-
 public class KthLevel {
     static class Node {
         int data;
