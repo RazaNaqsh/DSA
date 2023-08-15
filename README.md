@@ -22,3 +22,4 @@ The following Topics are included:
 - [Queue]
 - [GreedyAlgorithms]
 - [BinaryTree]
+- [BinarySearchTree]
