@@ -23,3 +23,4 @@ The following Topics are included:
 - [GreedyAlgorithms]
 - [BinaryTree]
 - [BinarySearchTree]
+- [AVLtree]
