@@ -11,12 +11,20 @@ public class Hashmap {
         hm.put("US", 50);
         hm.put("Japan", 30);
 
-        System.out.println(hm);
+        // System.out.println(hm);
 
-        // Get - o(1)
-        int population = hm.get("India");
-        System.out.println(population);
+        // // Get - o(1)
+        // int population = hm.get("India");
+        // System.out.println(population);
 
-        System.out.println(hm.get("China"));
+        // System.out.println(hm.get("China"));
+
+        // System.out.println(hm.containsKey("India"));
+
+        // // remove
+        // hm.remove("Japan");
+        // System.out.println(hm);
+
+        System.out.println(hm.size());
     }
 }
