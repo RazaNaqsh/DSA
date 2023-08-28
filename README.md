@@ -25,3 +25,4 @@ The following Topics are included:
 - [BinarySearchTree]
 - [AVLtree]
 - [HeapsAndPriorityQueues]
+- [HashMap]
