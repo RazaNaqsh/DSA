@@ -49,6 +49,7 @@ public class HashMapCode {
 
         }
 
+        @SuppressWarnings("unchecked")
         private void rehash() {
             LinkedList<Node> oldBuck[] = buckets;
             buckets = new LinkedList[N * 2];
@@ -102,6 +103,7 @@ public class HashMapCode {
 
             if (di != -1) {
                 Node node = buckets[bi].remove(di);
+                n--;
                 return node.value;
             } else {
                 return null;
@@ -121,11 +123,34 @@ public class HashMapCode {
         }
 
         public ArrayList<K> keySet() {
-            return null;
+            ArrayList<K> keys = new ArrayList<>();
+
+            for (int i = 0; i < buckets.length; i++) {
+                LinkedList<Node> ll = buckets[i];
+                for (Node node : ll) {
+                    keys.add(node.key);
+                }
+            }
+            return keys;
+        }
+
+        public boolean isEmpty() {
+            return n == 0;
         }
     }
 
     public static void main(String[] args) {
+        HashMap<String, Integer> hm = new HashMap<>();
+        hm.put("India", 100);
+        hm.put("US", 80);
+        hm.put("China", 120);
 
+        ArrayList<String> keys = hm.keySet();
+        System.out.println(hm.get("India"));
+        System.out.println(hm.remove("India"));
+        System.out.println(hm.get("India"));
+        // for (String key : keys) {
+        // System.out.println(key);
+        // }
     }
 }
