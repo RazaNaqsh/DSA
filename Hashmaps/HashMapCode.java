@@ -101,7 +101,15 @@ public class HashMapCode {
         }
 
         public V get(K key) {
-            return null;
+            int bi = hashFunction(key);
+            int di = SearchInLL(key, bi);
+
+            if (di != -1) {
+                Node node = buckets[bi].get(di);
+                return node.value;
+            } else {
+                return null;
+            }
         }
 
         public ArrayList<K> keySet() {
