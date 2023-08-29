@@ -86,7 +86,14 @@ public class HashMapCode {
         }
 
         public boolean containsKey(K key) {
-            return false;
+            int bi = hashFunction(key);
+            int di = SearchInLL(key, bi);
+
+            if (di != -1) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
         public V remove(K key) {
