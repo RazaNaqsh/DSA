@@ -97,7 +97,15 @@ public class HashMapCode {
         }
 
         public V remove(K key) {
-            return null;
+            int bi = hashFunction(key);
+            int di = SearchInLL(key, bi);
+
+            if (di != -1) {
+                Node node = buckets[bi].remove(di);
+                return node.value;
+            } else {
+                return null;
+            }
         }
 
         public V get(K key) {
