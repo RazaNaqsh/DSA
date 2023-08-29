@@ -79,6 +79,10 @@ public class HashMapCode {
                 n++;
             }
             double lambda = (double) n / N;
+
+            if (lambda > 2.0) {
+                rehash();
+            }
         }
 
         public boolean containsKey(K key) {
