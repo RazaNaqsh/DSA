@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LinkedHashmap",
+      "request": "launch",
+      "mainClass": "Hashmaps.LinkedHashmap",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "HashMapCode",
       "request": "launch",
       "mainClass": "Hashmaps.HashMapCode",

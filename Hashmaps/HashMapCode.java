@@ -20,6 +20,7 @@ public class HashMapCode {
 
         @SuppressWarnings("unchecked")
         public HashMap() {
+            this.n = 0;
             this.N = 4;
             this.buckets = new LinkedList[4]; // in some versions of java we cannot create a ll without
             // giving a type, thus java doesnt let us run the program without defining , so
