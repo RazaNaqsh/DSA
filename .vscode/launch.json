@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "UnionAndIntersection",
+      "request": "launch",
+      "mainClass": "Hashmaps.UnionAndIntersection",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "CountDistinctElement",
       "request": "launch",
       "mainClass": "Hashmaps.CountDistinctElement",
