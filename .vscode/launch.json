@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Treeset",
+      "request": "launch",
+      "mainClass": "Hashmaps.Treeset",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "LinkedHashset",
       "request": "launch",
       "mainClass": "Hashmaps.LinkedHashset",
