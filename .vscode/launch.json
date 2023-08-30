@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Treemap",
+      "request": "launch",
+      "mainClass": "Hashmaps.Treemap",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "LinkedHashmap",
       "request": "launch",
       "mainClass": "Hashmaps.LinkedHashmap",
