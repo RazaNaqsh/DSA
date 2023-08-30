@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Hashset",
+      "request": "launch",
+      "mainClass": "Hashmaps.Hashset",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "ValidAnagram",
       "request": "launch",
       "mainClass": "Hashmaps.ValidAnagram",
