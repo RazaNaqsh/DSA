@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LinkedHashset",
+      "request": "launch",
+      "mainClass": "Hashmaps.LinkedHashset",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "IterationOnHashSet",
       "request": "launch",
       "mainClass": "Hashmaps.IterationOnHashSet",
