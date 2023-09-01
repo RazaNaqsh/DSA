@@ -26,11 +26,25 @@ public class Trie {
         curr.eow = true;
     }
 
+    public static boolean search(String key) {
+        Node curr = root;
+        for (int lvl = 0; lvl < key.length(); lvl++) {
+            int idx = key.charAt(lvl) - 'a';
+            if (curr.children[idx] == null) {
+                return false;
+            }
+            curr = curr.children[idx];
+        }
+        return curr.eow == true;
+    }
+
     public static void main(String[] args) {
         String words[] = { "the", "a", "there", "their", "any", "thee" };
 
         for (int i = 0; i < words.length; i++) {
             insert(words[i]);
         }
+        System.out.println(search("thee"));
+
     }
 }
