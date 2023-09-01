@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "ShortestUniquePrefix",
+      "request": "launch",
+      "mainClass": "Tries.ShortestUniquePrefix",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "Trie",
       "request": "launch",
       "mainClass": "Tries.Trie",
