@@ -26,3 +26,4 @@ The following Topics are included:
 - [AVLtree]
 - [HeapsAndPriorityQueues]
 - [HashMap]
+- [Tries]
