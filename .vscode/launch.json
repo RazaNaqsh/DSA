@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BFS",
+      "request": "launch",
+      "mainClass": "Graphs.BFS",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "CreateGraph",
       "request": "launch",
       "mainClass": "Graphs.CreateGraph",
