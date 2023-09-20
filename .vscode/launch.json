@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "DFS",
+      "request": "launch",
+      "mainClass": "Graphs.DFS",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "BFS",
       "request": "launch",
       "mainClass": "Graphs.BFS",
