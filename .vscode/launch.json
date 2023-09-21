@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HasPath",
+      "request": "launch",
+      "mainClass": "Graphs.HasPath",
+      "projectName": "JAVA_DSA_68acebdc"
+    },
+    {
+      "type": "java",
       "name": "DFS",
       "request": "launch",
       "mainClass": "Graphs.DFS",
