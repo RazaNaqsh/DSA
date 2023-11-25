@@ -1,6 +1,6 @@
-# Data Structures and Algorithms in Java
+# Data Structures and Algorithms in Java And Python
 
-This repository contains Java implementations of various Data Structures and
+This repository contains Java/Python implementations of various Data Structures and
 Algorithms commonly used in Computer Science and Software Engineering. Each
 implementation is provided as a separate Java file.
 
