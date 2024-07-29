@@ -4,7 +4,7 @@ def getNumberPattern(n: int) -> None:
         for j in range(size):
             top = i
             left = j
-            right = size - j- 1
+            right = size - j - 1
             bottom = size - i - 1
             min_dist = min(top,bottom,right,left)
             print(n-min_dist,end="")
